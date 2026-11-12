@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111214">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Workout">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Workout Tracker</title>
+</head>
+<body>
+  <header class="topbar">
+    <div><div class="eyebrow">OFFLINE WORKOUT TRACKER</div><h1 id="page-title">Workouts</h1></div>
+    <button class="icon-btn" id="settings-btn" aria-label="Settings">⚙</button>
+  </header>
+  <main id="app" aria-live="polite"></main>
+  <nav class="tabbar">
+    <button class="tab active" data-tab="workouts"><span>▦</span>Workouts</button>
+    <button class="tab" data-tab="history"><span>◷</span>History</button>
+    <button class="tab" data-tab="settings"><span>⚙</span>Settings</button>
+  </nav>
+  <dialog id="modal"><form method="dialog" id="modal-form"><div id="modal-content"></div></form></dialog>
+  <input id="import-file" type="file" accept=".json,application/json" hidden>
+  <script src="app.js"></script>
+</body>
+</html>
